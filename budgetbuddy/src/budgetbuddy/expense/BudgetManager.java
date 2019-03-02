@@ -16,10 +16,8 @@ public class BudgetManager {
 
 	private Utilities utilities;
 
-	public BudgetManager() {
-		this(null, null, null, null, null, null);
-	}
-
+	
+	
 	public BudgetManager(Income i, Food f, Gas g, Insurance ins, Rent r, Utilities u) {
 		income = i;
 		food = f;
@@ -31,7 +29,7 @@ public class BudgetManager {
 
 	public static BudgetManager getInstance() {
 		if (instance == null) {
-			instance = new BudgetManager();
+			instance = new BudgetManager(null, null, null, null, null, null);
 		}
 		return instance;
 	}
@@ -39,12 +37,21 @@ public class BudgetManager {
 	public String isOver() {
 		String s = "";
 		if (gas.isOver() ) {
-			s += "You spend too much on gas ";
+			s += gas.toString();
 		}
 		if (food.isOver() ) {
-			s += "You spend too much money on food ";
+			s += food.toString();
 		}
-		return s; 
+		if (insurance.isOver() ) {
+			s += insurance.toString();
+		}
+		if (rent.isOver()) {
+			s += rent.toString();
+		}
+		if (utilities.isOver()) {
+			s += utilities.toString();
+		}
+		return s;
 	}
 
 }
