@@ -28,13 +28,6 @@ public class BudgetManager {
 		rent = r;
 		utilities = u;
 	}
-	
-	public boolean isOver(AbstractExpense e) {
-		if (e instanceof Food) {
-			
-		}
-		return false;
-	}
 
 	public static BudgetManager getInstance() {
 		if (instance == null) {
@@ -43,6 +36,15 @@ public class BudgetManager {
 		return instance;
 	}
 	
-	
+	public String isOver() {
+		String s = "";
+		if (gas.isOver() ) {
+			s += "You spend too much on gas ";
+		}
+		if (food.isOver() ) {
+			s += "You spend too much money on food ";
+		}
+		return s; 
+	}
 
 }
