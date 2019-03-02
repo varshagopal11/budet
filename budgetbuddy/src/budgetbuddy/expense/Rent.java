@@ -7,6 +7,5 @@ public class Rent extends AbstractExpense {
 	public Rent(double amount) {
 		super(amount, REC_PERCENT);
 	}
-
 		
 }

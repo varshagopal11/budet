@@ -453,8 +453,7 @@ public class WolfResultsGUI extends JFrame implements ActionListener, Observer {
 	 * Clear and updates the list of races
 	 */
 	private void setRaceList() {
-//		raceListModel.addElement("Happy Birthday");
-//		raceListModel.addElement("To meee");
+
 		raceListModel.removeAllElements();
 		String[] races = new String[WolfResultsManager.getInstance().getRaceList().size()];
 		for (int i = 0; i < races.length; i++) {

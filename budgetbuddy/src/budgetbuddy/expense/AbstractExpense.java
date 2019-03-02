@@ -5,6 +5,8 @@ public class AbstractExpense {
 	double amount;
 
 	double recPercent;
+	
+	double totalIncome; 
 
 	/**
 	 * Constructor that declares all fields
@@ -37,5 +39,16 @@ public class AbstractExpense {
 
 	public void setRecPercent(double recPercent) {
 		this.recPercent = recPercent;
+	}
+	
+	public double getIncome() {
+		return totalIncome;
+	}
+	
+	public boolean isOver() {
+		if (totalIncome/amount > recPercent) {
+			return true;
+		}
+		return false;
 	}
 }
