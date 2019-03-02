@@ -6,8 +6,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
-import edu.ncsu.csc216.wolf_results.race_results.Race;
-import edu.ncsu.csc216.wolf_results.race_results.RaceList;
 
 /**
  * WolfResultsWriter class creates a file to hold the results from the
